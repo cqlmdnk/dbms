@@ -25,7 +25,8 @@ function addMovieTab() {
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "block";
   }
-
+  dropdownDiv = document.getElementById("dropdown-list");
+  dropdownDiv .style.display = "block";
 }
 
 
@@ -49,7 +50,8 @@ function addSeriesTab() {
     tabcontent[i].style.display = "block";
   }
 
-
+  dropdownDiv = document.getElementById("dropdown-list");
+  dropdownDiv .style.display = "block";
 
 }
 
@@ -61,7 +63,8 @@ function addPersonTab() {
   fullcontent = document.getElementsByClassName("omrs-input-group");
   selectors = document.getElementsByClassName("dd ddcommon borderRadius")
 
-
+  dropdownDiv = document.getElementById("dropdown-list");
+  dropdownDiv .style.display = "none";
   for (i = 0; i < fullcontent.length; i++) {
     fullcontent[i].style.display = "none";
   }
