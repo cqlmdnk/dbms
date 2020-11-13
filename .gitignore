@@ -1,2 +1,4 @@
 
-/assets/js/vendor/*.js
+/assets/js/vendor/*.*
+
+/assets/css/vendor/*.*
