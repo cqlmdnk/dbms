@@ -14,17 +14,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="assets/css/fontAwesome.css">
-        <link rel="stylesheet" href="assets/css/hero-slider.css">
-        <link rel="stylesheet" href="assets/css/owl-carousel.css">
-        <link rel="stylesheet" href="assets/css/datepicker.css">
-        <link rel="stylesheet" href="assets/css/templatemo-style.css">
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/fontAwesome.css">
+        <link rel="stylesheet" href="assets/css/vendor/hero-slider.css">
+        <link rel="stylesheet" href="assets/css/vendor/owl-carousel.css">
+        <link rel="stylesheet" href="assets/css/vendor/datepicker.css">
+        <link rel="stylesheet" href="assets/css/vendor/templatemo-style.css">
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/login.css">
 
-        <script src="assets/js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <!--
 	Venue Template
 	http://www.templatemo.com/tm-522-venue
@@ -47,19 +48,20 @@
                                 <li class='active'><a href="#">Popular</a></li>
                                 <li><a href="#">Most Rated</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Most Visited 1</a>
+                                        <li><a href="#">Most Rated Series</a>
                                      
                                         </li>
-                                        <li><a href="#">Most Visited 2</a>
+                                        <li><a href="#">Most Rated Movies</a>
                                             
                                         </li>
-                                        <li><a href="#">Most Visited 3</a>
+                                        <li><a href="#">Most Rated Episodes</a>
                                             
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a class="scrollTo" data-scrollTo="blog" href="#">Blog Entries</a></li>
                                 <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
+                                <li><a class="scrollTo" data-scrollTo="login" href="#">Login</a></li>
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
@@ -494,78 +496,65 @@
 
     <section class="contact" id="contact">
        
-        <div class="container">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="wrapper">
-                  <div class="section-heading">
-                      <span>Contact Us</span>
-                      <h2>Vivamus nec vehicula felis</h2>
-                  </div>
-                  <!-- Modal button -->
-                  <button id="modBtn" class="modal-btn">Talk to us</button>
-                </div>  
-                <div id="modal" class="modal">
-                  <!-- Modal Content -->
-                  <div class="modal-content">
-                    <div class="close fa fa-close"></div>
-                    <div class="row">
-                        <div class="col-md-8"> 
-                            <div class="left-content">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="section-heading">
-                                            <span>Talk To Us</span>
-                                            <h2>Let's have a discussion</h2>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                                      </fieldset>
-                                    </div>
-                                     <div class="col-md-6">
-                                      <fieldset>
-                                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
-                                      </fieldset>
-                                    </div>
-                                    <div class="col-md-12">
-                                      <fieldset>
-                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                                      </fieldset>
-                                    </div>
-                                    <div class="col-md-12">
-                                      <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
-                                      </fieldset>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="right-content">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="content">                                          
-                                            <div class="section-heading">
-                                                
-                                            </div>
-                                            <p>Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium. Suspendisse fermentum nec risus eu bibendum.</p>
-                                            <ul>
-                                                <li><span>Phone:</span><a href="#">010-050-0550</a></li>
-                                                <li><span>Email:</span><a href="#">hi@company.co</a></li>
-                                                <li><span>Address:</span><a href="#">company.co</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
-                  </div>
-                </div>
-            </div>
-        </div>
+       
     </section>
+
+
+
+    <section class="login" id="login">
+       
+       <div class="container">
+      
+
+
+  
+       <script type="text/javascript" src="assets/js/login.js"></script> 
+
+
+<div class="container-login" id="container-login">
+	<div class="form-container sign-up-container">
+		<form action="Business/register_user.php" id="registerAct" method="post">
+			<h1>Create Account</h1>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" name="username"/>
+			<input type="email" placeholder="Email" name="email" />
+			<input type="password" placeholder="Password"  name="password1"/>
+            <input type="password" placeholder="Confirm Password"  name="password2"/>
+			<button >Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="Business/login_user.php" id="loginAct" method="post">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="username" placeholder="Username" name="username"/>
+			<input type="password" placeholder="Password" name="password"/>
+			<button >Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" onclick="signInButton()" id= "signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" onclick="signUpButton()" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+       </div>
+   </section>
+
 
 
 
@@ -608,12 +597,12 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
     
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/vendor/datepicker.js"></script>
+    <script src="assets/js/vendor/plugins.js"></script>
     <script src="assets/js/main2.js"></script>
 </body>
 </html>
