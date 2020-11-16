@@ -14,7 +14,7 @@ if($user == NULL){
 else{
     
     $_SESSION['message'] = 'This username is already taken.';
-    header('Location: ../login.php');
+    header('Location: ../index.php');
     exit();
 }
 

@@ -2,6 +2,7 @@
 <html>
     <head>
     <?php
+    require('Business/get_movies.php');
     if(!isset($_SESSION)) 
     { 
         session_start(); 
@@ -491,6 +492,17 @@
     </section>
 
 
+    <section id="movies-container">
+    <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Movies</h2>
+                    </div>
+                </div> 
+            </div> 
+        <div class="movie-content"><span><?php  echo GetMovies()?></span></div>
+    </section>
+
 
 
 
@@ -515,7 +527,7 @@
 	<div class="form-container sign-up-container">
 		<form action="Business/register_user.php" id="registerAct" method="post">
 			<h1>Create Account</h1>
-			<span>or use your email for registration</span>
+			<span style="font-size: 16px">or use your email for registration</span>
 			<input type="text" placeholder="Name" name="username"/>
 			<input type="email" placeholder="Email" name="email" />
 			<input type="password" placeholder="Password"  name="password1"/>
@@ -531,7 +543,7 @@
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-			<span>or use your account</span>
+			<span style="font-size: 16px">or use your account</span>
 			<input type="username" placeholder="Username" name="username"/>
 			<input type="password" placeholder="Password" name="password"/>
 			<button >Sign In</button>
@@ -541,12 +553,12 @@
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
+				<p style="font-size: 16px">To keep connected with us please login with your personal info</p>
 				<button class="ghost" onclick="signInButton()" id= "signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
+				<p style="font-size: 16px ">Enter your personal details and start journey with us</p>
 				<button class="ghost" onclick="signUpButton()" id="signUp">Sign Up</button>
 			</div>
 		</div>

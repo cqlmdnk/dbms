@@ -15,9 +15,9 @@ if(!isset($_SESSION))
  $rating= (float)$_POST['movieRating'];
  $ratingCount= (int)$_POST['movieRatingCount'];
  $nation= $_POST['movieNation'];
- $image= $_POST['movieLimit'];
- $info= $_POST['movieIm'];
- $limit= $_POST['movieInfo'];
+ $image= $_POST['movieIm'];
+ $info= $_POST['movieInfo'];
+ $limit= $_POST['movieLimit'];
 
 
 

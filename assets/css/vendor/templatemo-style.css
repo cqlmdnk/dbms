@@ -26,6 +26,7 @@ p {
 
 section {
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 
@@ -738,6 +739,13 @@ a.active:after {
 
 
 
+section#login {
+  margin-top: 80px;
+  background-color: rgb(145, 145, 145);
+}
+
+
+
 section#video-container {
   margin-top: 80px;
 }
@@ -1178,6 +1186,10 @@ footer .contact-info ul li a {
   text-decoration: none;
   color: #4883ff;
 }
+
+
+
+
 
 
 @media (max-width:992px) {

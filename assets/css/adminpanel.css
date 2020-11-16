@@ -767,3 +767,8 @@ div.dropdown-list {
   color: #333;
   border: none;
 }
+
+#movie-content { 
+	position: center;
+	
+} 

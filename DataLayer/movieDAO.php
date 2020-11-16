@@ -21,4 +21,23 @@ include ('connection.php');
     return $result ;
     
  }
+
+
+ function GetAllMovies()
+ {
+    $conn = OpenCon();
+    
+
+    $stmt = $conn->prepare("CALL GetAllMoviesImages()");
+    
+
+   
+    $stmt->execute();
+    $result =  $stmt->get_result();
+    
+    CloseCon($conn);
+    return $result ;
+    
+ }
+
  ?>
