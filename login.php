@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="assets/css/login.css">
-<script type="text/javascript" src="assets/js/login.js"></script> 
-<?php
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
-    ?>
-<script> 
+<section class="login" id="login">
+       
+       <div class="container">
+      
+
 
   
-</script> 
-</head>
+       <script type="text/javascript" src="assets/js/login.js"></script> 
 
-<body>
-<h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
-<div class="container" id="container">
+
+<div class="container-login" id="container-login">
 	<div class="form-container sign-up-container">
 		<form action="Business/register_user.php" id="registerAct" method="post">
 			<h1>Create Account</h1>
-			<span>or use your email for registration</span>
+			<span style="font-size: 16px">or use your email for registration</span>
 			<input type="text" placeholder="Name" name="username"/>
 			<input type="email" placeholder="Email" name="email" />
 			<input type="password" placeholder="Password"  name="password1"/>
@@ -37,7 +28,7 @@
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
-			<span>or use your account</span>
+			<span style="font-size: 16px">or use your account</span>
 			<input type="username" placeholder="Username" name="username"/>
 			<input type="password" placeholder="Password" name="password"/>
 			<button >Sign In</button>
@@ -47,24 +38,16 @@
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
+				<p style="font-size: 16px">To keep connected with us please login with your personal info</p>
 				<button class="ghost" onclick="signInButton()" id= "signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
+				<p style="font-size: 16px ">Enter your personal details and start journey with us</p>
 				<button class="ghost" onclick="signUpButton()" id="signUp">Sign Up</button>
 			</div>
 		</div>
 	</div>
 </div>
-
-<footer>
-	<p>
-		
-	</p>
-</footer>
-
-</body>
-
-</html>
+       </div>
+   </section>
