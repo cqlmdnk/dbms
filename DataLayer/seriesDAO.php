@@ -1,7 +1,7 @@
 
 <?php
 
-include ('connection.php');
+include_once ('connection.php');
 
 
 
@@ -21,4 +21,24 @@ include ('connection.php');
     return $result ;
     
  }
+
+
+ 
+ function GetAllSeries()
+ {
+    $conn = OpenCon();
+    
+
+    $stmt = $conn->prepare("CALL GetAllSeriesImages()");
+    
+
+   
+    $stmt->execute();
+    $result =  $stmt->get_result();
+    
+    CloseCon($conn);
+    return $result ;
+    
+ }
+
  ?>

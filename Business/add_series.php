@@ -2,8 +2,7 @@
 
 include ('../DataLayer/seriesDAO.php');
 include ('../DataLayer/seriesActorDAO.php');
-include ('../DataLayer/seriesWriterDAO.php');
-include ('../DataLayer/seriesDirectorDAO.php');
+include ('../DataLayer/seriesCreatorDAO.php');
 if(!isset($_SESSION)) 
     { 
         session_start(); 

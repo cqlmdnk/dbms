@@ -3,6 +3,7 @@
     <head>
     <?php
     require('Business/get_movies.php');
+    require('Business/get_series.php');
     if(!isset($_SESSION)) 
     { 
         session_start(); 
@@ -50,6 +51,7 @@
                            
                             <li><a class="active" href="?url=mainpage">Home</a></li>
                             <li><a class="active" href="?url=movies">All Movies</a></li>
+                            <li><a class="active" href="?url=series">All Series</a></li>
                                 <li class='active'><a href="#">Popular</a></li>
                                 <li><a href="#">Most Rated</a>
                                     <ul class="sub-menu">
