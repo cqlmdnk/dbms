@@ -24,7 +24,7 @@ include_once ('connection.php');
 
 
  
- function GetAllSeries()
+ function GetAllSeriesDAO()
  {
     $conn = OpenCon();
     
@@ -39,6 +39,22 @@ include_once ('connection.php');
     CloseCon($conn);
     return $result ;
     
+ }
+
+ function GetSeriesDAOById($id){
+   $conn = OpenCon();
+    
+
+   $stmt = $conn->prepare("CALL GetSeriesById(?)");
+   $stmt->bind_param("i", $id);
+   
+
+  
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   
+   CloseCon($conn);
+   return $result ;
  }
 
  ?>

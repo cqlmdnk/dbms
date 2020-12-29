@@ -1,0 +1,32 @@
+img.poster {
+    border: 1px solid;
+    border-color: black;
+    width : 400px;
+    height : 600px;
+    
+  }
+
+h1.title-name{
+   
+    font-family: Helvetica;
+    font-size : 24px;
+}
+
+div.poster-container{
+    margin-left: 100px;
+    position: relative;
+}
+
+
+section.title-info{
+    margin-left: 620px;
+    top:-600px;
+    position: relative;
+    font-size: 14px;
+    padding-bottom: 600px;
+    background-color: rgb(87, 170, 121)
+}
+section.series-section{
+    background-color: rgb(110, 212, 153)
+    
+}

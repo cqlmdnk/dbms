@@ -1,23 +1,24 @@
+<?php  
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $row = GetSeriesById($id);
+        }
+        else{
+            include("err404.php");
+        }
 
-    <section id="heading-section">
-    <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h2>TV</h2>
-                    </div>
-                </div> 
-            </div>
-        </section>
-
-
-    <section id="movies-container">
-    <div class="row">
-                <div class="col-md-12">
-                    
-                </div> 
-            </div> 
-        <div class="movie-content"><?php  echo GetSeries()?></div>
-    </section>
+        
+        
+?>
 
 
+<section class="series-section">
+    <div class="poster-container">
 
+        <h1 class="title-name"><?php echo $row['seriesName'] ?></h1>
+
+        <img class="poster" id=<?php echo $row['seriesID'] ?> src=<?php echo $row['imageUrl']?> />;
+        
+    </div>
+    <section class="title-info"> <?php echo $row['info'] ?> </section> 
+</section>

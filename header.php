@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="assets/css/vendor/datepicker.css">
         <link rel="stylesheet" href="assets/css/vendor/templatemo-style.css">
         <link rel="stylesheet" href="assets/css/movies.css">
+        <link rel="stylesheet" href="assets/css/title.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/login.css">
 
@@ -50,8 +51,8 @@
                             <li><img src="https://i.ibb.co/xsxjHM7/pngwing-com.png" width="100" height="200" ></li>
                            
                             <li><a class="active" href="?url=mainpage">Home</a></li>
-                            <li><a class="active" href="?url=movies">All Movies</a></li>
-                            <li><a class="active" href="?url=series">All Series</a></li>
+                            <li><a class="active" href="?url=allmovies">All Movies</a></li>
+                            <li><a class="active" href="?url=allseries">All Series</a></li>
                                 <li class='active'><a href="#">Popular</a></li>
                                 <li><a href="#">Most Rated</a>
                                     <ul class="sub-menu">
