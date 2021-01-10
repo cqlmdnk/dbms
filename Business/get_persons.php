@@ -15,7 +15,7 @@ if($request == 1){
         $fetchData = mysqli_query($conn, "SELECT * FROM person WHERE 1");
      }else{
         $search = $_POST['searchTerm'];
-        $fetchData = mysqli_query($conn,"SELECT * FROM person WHERE 1");
+        $fetchData = mysqli_query($conn,"SELECT * FROM person WHERE personName=". $search);
      }
    
       

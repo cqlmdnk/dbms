@@ -1,6 +1,7 @@
 <?php
 
 require_once('DataLayer/seriesDAO.php');
+require_once('DataLayer/seriesActorDAO.php');
 
 function GetSeries() {
 
@@ -24,6 +25,18 @@ function GetSeriesById($seriesID){
    
     $row = $result->fetch_array();
     return $row;
+}
+
+function GetSeriesActorById($seriesID){
+    $result = GetSeriesActorDAOById($seriesID);
+   
+    $actor_array = array();
+
+    while ($row = $result->fetch_array()) {
+        array_push($actor_array, $row);
+
+    }
+    return $actor_array;
 }
 
 

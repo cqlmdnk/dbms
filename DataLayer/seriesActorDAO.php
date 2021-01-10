@@ -19,4 +19,16 @@ function AddSeriesActor($seriesID, $personID)
    return $result;
    
 }
+
+function GetSeriesActorDAOById($seriesID){
+   $conn = OpenCon();
+
+   $stmt = $conn->prepare("CALL  GetSeriesActorsBySeriesId(?)");
+   $stmt->bind_param("i", $seriesID);
+
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   CloseCon($conn);
+   return $result;
+}
 ?>
