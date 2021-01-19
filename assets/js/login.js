@@ -11,3 +11,10 @@ function signInButton() {
     element.classList.remove("right-panel-active");
    
 }
+
+
+function logOut() {
+    $.get("Business/logout_user.php");
+    setTimeout(() => window.location.reload(), 500);
+    return true;
+}

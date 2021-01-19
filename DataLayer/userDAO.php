@@ -6,28 +6,56 @@ include ('connection.php');
 
 
 
-function GetUsers($username)
+function ConfirmCredentials($username, $password)
  {
     $conn = OpenCon();
-    echo "Connected Successfully";
 
     $stmt = $conn->prepare("CALL GetUsersByUsername(?)");
     $stmt->bind_param("s", $username);
 
     $stmt->execute();
     $result = $stmt->get_result();
-    if($result){
-      CloseCon($conn);
-      $_SESSION['message'] = '<br>Successful</br>';
-      header('Location: ../adminpanel.php');
-      exit();
+    $row = $result->fetch_array();
+    CloseCon($conn);
+    if($row['password'] == $password){
+      
+    
+      return $row['username'];
+      
   }
   else{
-   CloseCon($conn);
-      $_SESSION['message'] = '<br>Failed to insert.</br>';
-      header('Location: ../adminpanel.php');
-      exit();
+
+      return false;
+      
   }
+  
+ }
+
+ function AddNewUser($username, $password, $email){
+    $conn = OpenCon();
+
+    $stmt = $conn->prepare("CALL AddNewUser(?, ?, ?)");
+    $stmt->bind_param("sss", $username, $password, $email);
+
+    $stmt->execute();
+    $result = $stmt->get_result();
+    CloseCon($conn);
+ }
+
+ function IsUserExist($username){
+    $conn = OpenCon();
+
+    $stmt = $conn->prepare("SELECT * FROM user WHERE user.username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if(mysqli_num_rows($result)>0){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
  }
  
 

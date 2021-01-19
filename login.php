@@ -17,7 +17,7 @@
 			<input type="email" placeholder="Email" name="email" />
 			<input type="password" placeholder="Password"  name="password1"/>
             <input type="password" placeholder="Confirm Password"  name="password2"/>
-			<button >Sign Up</button>
+			<button type="submit" class="sign-in">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -31,7 +31,7 @@
 			<span style="font-size: 16px">or use your account</span>
 			<input type="username" placeholder="Username" name="username"/>
 			<input type="password" placeholder="Password" name="password"/>
-			<button >Sign In</button>
+			<button type="submit" class="sign-in" >Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">

@@ -19,4 +19,17 @@ function AddSeriesDirector($seriesID, $personID)
    return $result;
    
 }
+
+
+function GetSeriesCreatorDAOById($seriesID){
+   $conn = OpenCon();
+
+   $stmt = $conn->prepare("CALL  GetSeriesCreatorBySeriesId(?)");
+   $stmt->bind_param("i", $seriesID);
+
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   CloseCon($conn);
+   return $result;
+}
 ?>

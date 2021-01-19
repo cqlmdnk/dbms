@@ -20,4 +20,17 @@
     return $result;
     
  }
+
+  
+function GetMovieDirectorDAOById($movieID){
+   $conn = OpenCon();
+
+   $stmt = $conn->prepare("CALL  GetMovieDirectorByMovieId(?)");
+   $stmt->bind_param("i", $movieID);
+
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   CloseCon($conn);
+   return $result;
+}
  ?>

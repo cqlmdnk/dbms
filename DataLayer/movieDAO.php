@@ -57,5 +57,22 @@ include_once ('connection.php');
    return $result ;
  }
 
+ function GetMostRatedMoviesDAO(){
+   $conn = OpenCon();
+    
+
+   $stmt = $conn->prepare("SELECT * FROM mostratedmovie ORDER BY rating DESC");
+   
+   
+
+  
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   
+   CloseCon($conn);
+   return $result ;
+
+ }
+
 
  ?>

@@ -1,5 +1,5 @@
 <?php
-include ('connection.php');
+require_once ('connection.php');
 
 
 
@@ -24,7 +24,7 @@ include ('connection.php');
  }
 
 
- function GetPersons()
+ function GetPersonsDAO()
  {
     $conn = OpenCon();
     
@@ -36,6 +36,17 @@ include ('connection.php');
     CloseCon($conn);
     return $result;
 
+ }
+ function GetPersonDAOById($id){
+   $conn = OpenCon();
+
+   $stmt = $conn->prepare("CALL  GetPersonById(?)");
+   $stmt->bind_param("i", $id);
+
+   $stmt->execute();
+   $result =  $stmt->get_result();
+   CloseCon($conn);
+   return $result;
  }
 
  

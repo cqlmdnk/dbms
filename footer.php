@@ -1,7 +1,7 @@
 <div class="sub-footer">
-        <p>Copyright &copy; 2018 Company Name 
+        <p> &copy; 2021 Berkan Barış Tezcan 
     
-    	- Design: <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+    	</p>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>

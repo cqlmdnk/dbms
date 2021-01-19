@@ -59,7 +59,7 @@
                                         <li><a href="#">Most Rated Series</a>
                                      
                                         </li>
-                                        <li><a href="#">Most Rated Movies</a>
+                                        <li><a href="?url=mostratedmovies">Most Rated Movies</a>
                                             
                                         </li>
                                         <li><a href="#">Most Rated Episodes</a>
@@ -69,7 +69,18 @@
                                 </li>
                                 <li><a class="scrollTo" data-scrollTo="blog" href="#">Blog Entries</a></li>
                                 <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
-                                <li><a class="active" href="?url=login">Login</a></li>
+                                <?php
+                                if(isset($_SESSION['logged_in'])){
+                                    echo "<li><a class=\"active\" href=\"\" onclick=\"logOut();\">Logout</a></li>";
+                                    echo "<li><a class=\"active\" href=\"\" onclick=\"\">My Contents</a></li>";
+                                    echo "<li><a class=\"active\" href=\"?url=myreviews\" onclick=\"\">My Reviews</a></li>";
+                                    echo "<li><a class=\"active\" href=\"\" onclick=\"\">My Lists</a></li>";
+                                }
+                                else{
+                                    echo "<li><a class=\"active\" href=\"?url=login\">Login</a></li>";
+                                }
+                                ?>
+                                
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
